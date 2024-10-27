@@ -1,0 +1,95 @@
+---> A terminal is a text-based interface that allows users to interact with their computer's operating system by typing commands. It provides access to the command-line interface (CLI), where users can execute tasks such as navigating directories, managing files, running programs, and controlling system processes.
+
+In modern systems:
+Linux/macOS: The terminal runs shell environments like Bash, Zsh, or Fish.
+Windows: The terminal includes tools like Command Prompt, PowerShell, or the Windows Terminal.
+The terminal is essential for developers and system administrators for tasks that are more efficient or only possible via the command line.
+
+in simple words terminals are like browsers and the tools are the web pages
+
+
+
+
+
+
+--->Bash (short for Bourne Again SHell) is a popular Unix shell and command-line interpreter used in many Linux distributions and macOS. It provides a way to interact with the operating system by typing commands in a text-based environment (terminal).
+
+Key features of Bash:
+Command execution: You can run programs, scripts, and system commands.
+Scripting: Bash allows the automation of tasks through shell scripts (files containing a series of commands).
+Environment variables: It uses environment variables to configure system settings.
+Text processing: It includes tools like grep, awk, and sed for text manipulation.
+
+
+
+
+
+
+---> Basic shell commands - 
+    echo (for printing)
+    echo $num (we are declaring a variable named num=4, We are print that variable using $ )
+    echo $((num+num2)) (This is for printing the addition of two variables)
+
+    #By .sh we are creating a bash scripting file. A .sh file is a shell script, typically written in Bash (or another Unix shell). It contains a series of commands that the shell executes. Shell scripts automate tasks by bundling multiple commands into a single file, making repetitive processes easier
+
+    - For executing the .sh file, we have to just write the file name with proper path like this ./text.sh
+
+
+    pwd (pwd stands for print working directory. It’s a command used in the terminal to display the current directory you are working in. It shows the full path from the root to the directory where the terminal session is located.)
+
+    whoami (The whoami command is used in the terminal to display the current user's username. When you type whoami and press enter, it prints the name of the user who is currently logged into the session.)
+
+    cd (The cd command stands for change directory. It's used in the terminal to navigate between directories in a file system. You specify the path of the directory you want to move into.)
+    cd ../ (The command cd ../ is used to move up one directory level in the file system. The .. represents the parent directory of your current location.)
+    cd directory_name (To Enter in the typed directory)
+    cd~/ (The command cd ~/ is used to quickly navigate to your home directory in the terminal.)
+
+    ls (The ls command is used in the terminal to list the contents of a directory. When you type ls and press enter, it displays the files and folders in your current working directory.)
+    ls -a (The command ls -a is used in the terminal to list all files and directories in the current working directory, including hidden files.)
+    ls -la (The command ls -la combines two options to provide a detailed list of all files and directories in the current working directory, including hidden ones)
+
+    touch file_name (The touch command is used in the terminal to create an empty file or to update the timestamp of an existing file.)
+
+    mkdir directory_name (The mkdir command stands for make directory. It is used in the terminal to create a new directory (folder).)
+
+    cp file_name directory_name (The cp command is used in the terminal to copy files and directories. Here we copied one file into one directory)
+
+    mv script.js src (The mv command is used in the terminal to move or rename files and directories. Here we move script.js into the src folder. we can also rename the file or folder by this mv command. And we can also move and rename the file/folder name in same time)
+
+    rm file_name (The rm command is used in the terminal to remove files .)
+    rmdir directory_name (it is used to delete only empty directories)
+    rm -r directory_name (The command rm -r is used to remove directories and their contents recursively. This means that when you use this command, it will delete the specified directory and all files and subdirectories within it.)
+    rm -rf * (The command rm -rf * is a powerful and potentially dangerous command used in the terminal to forcefully and recursively delete all files and directories in the current directory.)
+
+    cat file_name (The cat command is used in the terminal to concatenate and display the contents of files. It's a simple but powerful command to view file contents, combine files, or create new files.)
+
+    nano file_name (The nano command opens the Nano text editor, which is a simple, easy-to-use terminal-based text editor. It is commonly used for creating and editing text files directly from the command line.)
+
+    vim file_name (The vim command opens Vim, a highly powerful and flexible text editor that's widely used in Unix-like systems. Unlike simpler editors like nano, Vim has more advanced features and modes, but it can be intimidating for new users due to its steep learning curve. If the file doesn’t exist, it will create a new one. Press i to enter Insert mode. This allows you to start typing text. Press Esc to return to Normal mode. To save and exit, first press Esc to enter Normal mode, then type :wq . If you want to exit without saving then enter :q!)
+
+
+
+---> What is a .abc file 
+Ans- A .abc file is typically associated with ABC notation, a shorthand form of musical notation. It's a text-based format used to represent music, making it easy to write and share tunes using plain text. Here's a brief overview:
+
+
+
+
+---> What is Prompt in terminal 
+In computing, a prompt refers to a symbol or set of characters that signals to the user that the system is ready to accept input. It typically appears in command-line interfaces, programming environments, or even chat-based applications, prompting the user to take an action or enter a command.
+in my bash the prompt is - angsh@Angshu MINGW64 ~/OneDrive/Desktop/Backend-Learning/05_Basics_Of_Terminal (main)
+
+How we can customise the prompt - 
+echo $PS1 ($PS1 is an environment variable in Unix-like operating systems that defines the primary prompt string displayed in the terminal. It controls what the command-line prompt looks like by using a combination of symbols, special characters, and text. By modifying $PS1, you can customize the appearance of your prompt to include useful information, like the username, hostname, current directory, and more.)
+
+echo $PS2 ($PS2 is an environment variable in Unix-like operating systems that defines the secondary prompt string in the terminal. This secondary prompt appears when a command spans multiple lines, indicating that the shell is waiting for further input to complete the command.)
+
+PS1=Angshu (It temporary change the prompt to Angshu)
+
+explorer . (The command explorer . is used in Windows to open the current directory in the File Explorer.)
+
+source file_name (The source command is used to execute commands from a file in the current shell session. Unlike running a script normally, which opens a new shell process, source runs the commands in the existing shell environment, so any environment variables or configurations set in the sourced file immediately affect the current session.)
+
+.bashrc (The .bashrc file is a shell script that Bash runs whenever you start a new interactive shell session (like opening a new terminal or logging in). It typically contains configurations, aliases, functions, and environment variables that customize the shell environment.)
+
+alias (The alias command in Unix-like operating systems is used to create shortcuts for commands. It allows you to define custom names for longer or more complex commands, making them easier and faster to execute.)

@@ -1,0 +1,88 @@
+1. What is a Server?
+A server is a computer system or software application that provides data, resources, or services to other computers, known as clients, over a network. Servers play a critical role in networks, including the internet, where they manage, store, and distribute data to clients on request.
+
+2. What is client?
+A client is any device or application that requests and interacts with resources or services provided by a server. Clients make requests to servers, which then process those requests and send back data or services.
+
+3. What is frontend?
+The frontend refers to the part of an application or website that users see and interact with. It’s essentially the user interface (UI) and the client-side logic that make applications interactive and visually appealing.
+
+
+*****YT DLP IS A COMMAND LINE APPLICATION USED TO DOWNLOAD YOUTUBE VIDEOS*****
+
+4. What CLI and GUI 
+
+CLI ---> 
+A CLI is an interface where users interact with the system by typing commands into a terminal or command prompt. It requires users to have knowledge of specific commands and syntax.
+
+Characteristics:
+Text-based interface.
+Commands are typed out, often followed by pressing Enter.
+Typically faster for experienced users who know the commands.
+Allows for automation and scripting, making repetitive tasks easier.
+
+Advantages:
+Lightweight and requires minimal system resources.
+Offers powerful flexibility for complex tasks.
+More control over the system; ideal for server management, programming, and network configuration.
+
+Example:
+The Bash shell in Unix/Linux, PowerShell in Windows, and Command Prompt are all CLIs.
+
+
+GUI ---> 
+A GUI is an interface that allows users to interact with the system through graphical elements like windows, icons, buttons, and menus. It is designed to be more user-friendly, especially for those unfamiliar with commands.
+
+Characteristics:
+Visual and interactive, using elements like icons, buttons, and windows.
+Operated primarily with a mouse and keyboard.
+Easier to learn and use, even for non-technical users.
+
+Advantages:
+More intuitive and accessible, especially for new or occasional users.
+Provides visual feedback, making it easier to understand system status.
+Good for tasks that benefit from visual representation (e.g., photo editing, web browsing).
+
+Example:
+Operating systems like Windows, macOS, and many Linux distributions (e.g., Ubuntu’s GNOME desktop) are GUIs.
+
+
+*****5. What is Node js and why we are using it? *****
+Node.js is a runtime environment that allows you to run JavaScript code outside of a web browser. It is built on Google’s V8 JavaScript engine (the same engine that powers Chrome) and enables developers to use JavaScript on the server side, making it possible to create full-stack applications with JavaScript alone.
+
+Key Features of Node.js:
+
+Asynchronous and Non-blocking:
+Node.js uses an event-driven, non-blocking I/O model, which allows it to handle multiple operations (like reading a file or querying a database) concurrently. This is great for building applications that need to handle a high number of simultaneous requests, such as APIs or chat applications.
+
+Single-Threaded:
+Node.js runs on a single thread, but it can handle many connections at once thanks to its non-blocking model. This approach is efficient for I/O-bound tasks (e.g., reading files or interacting with databases), although it may not be ideal for CPU-intensive tasks.
+
+Fast and Lightweight:
+Built on the V8 engine, Node.js compiles JavaScript to machine code quickly and efficiently. It’s lightweight and well-suited for developing scalable network applications.
+
+Rich Package Ecosystem:
+Node.js has a massive ecosystem of libraries and packages available via npm (Node Package Manager). This helps developers easily add features and speed up development.
+
+Why Use Node.js?
+
+Full-Stack JavaScript:
+Node.js enables JavaScript to be used for both front-end and back-end development, allowing for a unified language across the entire application stack. This reduces the need for switching between languages, making it easier to maintain and develop applications.
+
+Real-Time Applications:
+Node.js is excellent for real-time applications, like chat apps, gaming applications, and collaboration tools (e.g., document collaboration apps), where quick data updates are essential.
+
+Scalable Network Applications:
+Its non-blocking I/O and event-driven architecture make Node.js highly efficient for building applications that need to manage a large number of concurrent connections, such as APIs and microservices.
+
+Single-Page Applications (SPAs):
+With JavaScript on both the client and server, Node.js simplifies building single-page applications that rely on quick data retrieval and rendering.
+
+Community and Support:
+Node.js has a large, active community and corporate support (from companies like Microsoft and IBM), which helps keep it well-maintained and continuously evolving.
+
+Examples of Use Cases:
+REST APIs and GraphQL APIs
+Real-time applications like chat apps or online games
+Data-intensive applications, like e-commerce sites
+Streaming services (e.g., Netflix and Spotify use Node.js for parts of their infrastructure)

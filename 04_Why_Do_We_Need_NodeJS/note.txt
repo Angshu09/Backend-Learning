@@ -1,0 +1,28 @@
+1. Why NodeJS is different from JS in the browser?
+Ans- Node.js runs JavaScript on the server-side, while browser JavaScript runs on the client-side. Node.js provides access to system resources like the file system, operating system, and networking, while browser JavaScript focuses on interacting with the webpage (DOM) and has more security restrictions. Node.js uses the CommonJS module system (require()), while browsers support ES6 modules (import/export).
+
+Access to File System:
+Node.js: Can read/write files, create directories, and manage files using the fs module.
+Browser JS: Cannot access the file system directly due to security reasons, though users can interact with files via input elements (e.g., file uploads).
+
+Network Capabilities:
+Node.js: Can create servers, manage sockets, handle HTTP requests/responses, and communicate directly over TCP/UDP protocols.
+Browser JS: Limited to making HTTP requests (using fetch, XMLHttpRequest), websockets for real-time communication, and can't open arbitrary network connections.
+
+Process Management:
+Node.js: Can spawn and manage multiple processes or threads, including child processes, using the child_process module.
+Browser JS: Runs in a single thread, though Web Workers can be used for parallel execution, but without access to DOM.
+
+Interacting with Operating System:
+Node.js: Can access OS-level information, manage environment variables, interact with the command line, and perform system-level tasks.
+Browser JS: No direct access to the OS; interaction is sandboxed for security, limiting access to OS-level features.
+
+Additional:
+Memory management, Event-driven architecture, Security constraints.
+
+
+
+History Of NodeJs ---> 
+Node.js was created by Ryan Dahl in 2009 to enable JavaScript to run on the server side. It was built on Google Chrome’s V8 JavaScript engine, allowing for fast execution. Dahl introduced Node.js to handle asynchronous, non-blocking operations efficiently, making it ideal for I/O-heavy tasks like web servers.
+Initially, Node.js gained popularity for building scalable, event-driven applications. The introduction of npm (Node Package Manager) in 2010 helped expand its ecosystem, allowing developers to share and manage packages easily.
+Over the years, Node.js has grown significantly, being used by major companies for web servers, real-time applications, and microservices. In 2015, Node.js and io.js (a fork) merged under the Node.js Foundation, bringing stability and innovation to the project. Today, it's a core technology for backend development in modern web applications.
