@@ -1,0 +1,38 @@
+1. What is CPU?
+CPU (Central Processing Unit)
+The CPU, often referred to as the “brain” of the computer, is the primary component responsible for executing instructions from programs. It performs arithmetic, logic, control, and input/output (I/O) operations as specified by instructions in the computer's programs.
+
+Role: The CPU handles all processing tasks, managing data flow and executing commands to make applications run.
+Components: A CPU typically includes ALU (Arithmetic Logic Unit), CU (Control Unit), and Cache Memory to optimize task execution.
+
+
+2. What is Processor?
+The term processor is often used interchangeably with CPU but can sometimes refer to the whole CPU chip in a system. In modern computers, each processor can contain multiple cores, each capable of handling tasks independently, which significantly boosts performance.
+
+Types: Processors vary by generation, clock speed (measured in GHz), architecture (e.g., x86, ARM), and the number of cores.
+Examples: Intel Core i7, AMD Ryzen 5, Apple M1 are all processors with varying numbers of cores.
+
+
+3. What is Core?
+A core is an independent processing unit within a CPU that can execute instructions. Each core can handle its own task (thread) independently of others, which enables multitasking and parallel processing. Modern CPUs typically contain multiple cores to enhance performance.
+
+Single-core CPU: Only one core, limited to handling one task at a time.
+Multi-core CPU: Contains multiple cores (e.g., dual-core, quad-core), allowing simultaneous task processing.
+Hyper-Threading/Simultaneous Multithreading (SMT): Some processors allow a single core to handle multiple threads, effectively simulating additional cores.
+
+
+---> check cores in node ---> os.availableParallelism() ---> In Node.js, os.availableParallelism() is a method introduced to determine the number of CPU cores available for parallel processing. It helps developers understand the system’s capacity for concurrent tasks, which can be valuable when setting up threading, clustering, or distributing tasks across multiple cores in an application.
+
+
+4. What is an Operatng System?
+An Operating System (OS) is software that acts as an intermediary between computer hardware and the user applications. It provides a user interface, manages system resources, and enables the execution of programs.
+
+5. What is kernal?
+The Kernel is the core component of an operating system. It acts as a bridge between applications and the hardware, managing system resources and facilitating communication between software and hardware components.
+
+6. What is Process?
+In an operating system (OS), a process is an instance of a program that is executing. A process is more than just the program code (also called the text section of a process); it also includes the program's current activity, represented by the value of the program counter, the contents of the processor's registers, the process stack, and a heap for dynamic memory allocation. Essentially, a process is a running program along with its associated resources and execution state.
+
+7. What is the process variable in nodeJS?
+In Node.js, the process object is a global object that provides information and control over the current Node.js process. It includes a variety of properties and methods for interacting with the runtime environment, and since it's global, you don’t need to import it or require any module to access it.
+If you run console.log(process); in a Node.js environment, it will output a large amount of information about the process.

@@ -1,0 +1,50 @@
+---> What are environment variables?
+if I explain in one line then it is a key value pair of strings, means the key and the value both are strings. 
+Environment variables are dynamic values that affect the processes or behavior of an operating system and the applications running on it. They are used to store system-wide values that are required by software programs to function correctly.
+
+---> User variables- 
+User variables are environment variables specific to an individual user account. They only apply when that user is logged in and influence processes launched under that user's profile. These variables are commonly used for personalized settings, such as user-specific file paths, temporary directories, or configuration values that only the specific user needs.
+
+---> System variables- 
+System variables are environment variables that are available to all users and processes across the entire operating system. They are set at the system level and affect the behavior of the system globally. These variables store essential configuration values required for system-wide operations, such as the PATH variable, which determines directories where executable files are located.
+
+---> Process-specific variable-
+A process-specific variable is an environment variable that is defined and accessible only within the context of a particular process or program. These variables are not inherited by other processes and do not persist after the process that created them has terminated. They are used to configure or influence the behavior of a single running instance of an application.
+
+---> code command (The code command is used to open files or folders in Visual Studio Code (VS Code) from the command line or terminal. It allows for easy integration of the VS Code editor into your development workflow, making it convenient to launch the editor and open specific files or directories directly.)
+
+---> The concept of inheriting the environment variables - 
+When a process (parent process) spawns another process (child process), it can pass along environment variables to the child process. This allows the child process to inherit the same environment settings and use them in its operations.
+
+---> Editing of environment variables 
+    1. if I add multiple paths (means directory path and it is mandatory to write a path) seperated by ; then it will show us line by line in a seperated manner. If the first one is a right location then only it will give us a menu view.
+
+---> Adding environment variable - use export keyword - 
+When you use the export command in a shell, like export num=78, you are setting an environment variable called num in your current shell session. This environment variable is available to any process spawned from that shell, including any instance of Node.js you run from the same shell session. However, it is not added globally to Node.js or to your system's global environment outside of that session
+
+---> what does do this node --inspect command - When you run a Node.js script with the --inspect flag, Node.js opens a debugging interface that allows you to attach a debugger to your application. This enables you to pause execution, set breakpoints, inspect variables, and step through your code to diagnose issues or understand the behavior of your application.
+
+---> run env, printenv command to print all the environment variable
+
+---> setx variable_name "value" (The setx command is used in Windows to set environment variables, not in Unix-based systems like Linux or macOS.)
+
+---> powershell -Command "Your-PowerShell-Command" (On systems where PowerShell is available, particularly on Windows, the correct way to run PowerShell commands from a Bash shell (like when using Windows Subsystem for Linux or any Bash emulation on Windows) is indeed)
+
+---> powershell -Command "REG delete HKCU\Environment /F /V VARIABLE_NAME" (The command is used to delete a specific environment variable from the Windows Registry using PowerShell.)
+
+---> Add Environment variable in system variables - powershell -Command "setx VARIABLE_NAME 'ANGSHU' /M"
+
+---> If we want to debug our code on chrome dev tools then just simply write node --inspect file_name, after that just go the console by using inspect in chrome, and then click on the node icon and you can simply enter a new dev tools tab and there you can simply debug.
+
+---> adding variable - num8=9 node --inspect app.js , if we want to add multiple variables then n8=9 n7=5 node --inspect app.js
+
+---> unset an environment variable -  env -u PS1 node --inspect app.js (here we are unsetting PS1)
+
+---> study explanation of how environment variables are inherited in the context of parent and child processes.
+
+---> \r\n - \r\n represents a new line in Windows text files, consisting of a carriage return (\r) followed by a line feed (\n). This format originates from early typewriters and teletypes, where \r would return the carriage to the start of the line and \n would advance the paper to the next line. Windows retained this combination for new lines, whereas Unix/Linux systems use only \n, and classic Mac OS used \r before macOS adopted \n as well. This difference can lead to compatibility issues when transferring text files between systems, necessitating conversion or handling strategies in code and text editors, which often provide features to manage or convert line endings appropriately.
+
+---> .env file - A .env file is a simple text file used to store environment variables for a project. It is commonly used in software development to manage configuration settings in a way that keeps sensitive information secure and makes it easy to change these settings based on different environments, such as development, testing, or production.
+
+---> CRLF & LF - CRLF (Carriage Return + Line Feed, \r\n) and LF (Line Feed, \n) are types of line endings used in text files to indicate the end of a line. CRLF, used by Windows, involves two characters: a carriage return followed by a line feed, while LF, used by Unix-based systems like Linux and macOS, uses just a line feed. This difference stems from early computing and typewriter mechanics, where carriage return moved the print head to the line's beginning and line feed advanced the paper. Cross-platform issues can arise when working with files across different operating systems, causing formatting or version control problems. Modern text editors and tools like Git offer features to manage and convert line endings, ensuring compatibility and consistency.
+

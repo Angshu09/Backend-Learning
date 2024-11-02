@@ -1,0 +1,17 @@
+---> What is Thread?
+A thread is the smallest unit of execution within a process. It represents a single sequence of instructions that can be managed independently by the operating system (OS). Threads allow programs to perform multiple tasks concurrently, which can lead to more efficient use of CPU resources.
+
+---> console.time() (console.time() is a method in JavaScript that allows you to measure the time taken to execute a block of code. It starts a timer when called, and you can stop the timer with console.timeEnd() to display the duration in milliseconds in the console. This is useful for debugging and performance analysis.)
+
+---> console.timeEnd() (console.timeEnd() is a JavaScript method that stops a timer previously started with console.time() and logs the elapsed time in milliseconds to the console. Both console.time() and console.timeEnd() must use the same label to work together.)
+
+
+---> Concurrency - Concurrency is the ability of a system to handle multiple tasks (or threads) seemingly at the same time by rapidly switching between them. It doesn’t necessarily mean that tasks are running simultaneously; instead, it focuses on managing multiple tasks by overlapping them or interleaving their execution to make efficient use of resources.
+
+---> Parallelism - Parallelism, on the other hand, is about running multiple tasks at exactly the same time by using multiple processors or cores. True parallelism requires hardware support (e.g., multiple cores or processors) to actually execute tasks simultaneously.
+
+---> Can a Process exists without a thread?
+A process cannot exist without at least one thread, as threads are essential for executing the code within a process. While a process provides resources like memory and environment, it doesn’t run instructions on its own; it relies on threads to perform actions. Every process starts with a main thread that allows it to execute, and without this thread, the process would have no execution path and thus cannot operate. Whether single-threaded or multi-threaded, threads enable the process to function by actively running its code.
+
+
+---> 
