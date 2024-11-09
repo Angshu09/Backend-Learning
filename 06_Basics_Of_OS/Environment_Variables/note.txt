@@ -48,3 +48,12 @@ When you use the export command in a shell, like export num=78, you are setting 
 
 ---> CRLF & LF - CRLF (Carriage Return + Line Feed, \r\n) and LF (Line Feed, \n) are types of line endings used in text files to indicate the end of a line. CRLF, used by Windows, involves two characters: a carriage return followed by a line feed, while LF, used by Unix-based systems like Linux and macOS, uses just a line feed. This difference stems from early computing and typewriter mechanics, where carriage return moved the print head to the line's beginning and line feed advanced the paper. Cross-platform issues can arise when working with files across different operating systems, causing formatting or version control problems. Modern text editors and tools like Git offer features to manage and convert line endings, ensuring compatibility and consistency.
 
+---> WSL - Windows Subsystem - WSL stands for Windows Subsystem for Linux. It is a compatibility layer for running a full Linux distribution natively on Windows without the need for a virtual machine or dual-boot setup. WSL allows you to run Linux command-line tools and applications alongside your Windows applications seamlessly.
+
+---> in bash using cd /c we are able to go to the c directory 
+
+---> mnt directory - The /mnt folder in Linux is a conventional directory used for temporarily mounting external storage devices like USB drives or network drives, allowing access to their files. In Windows Subsystem for Linux (WSL), /mnt is used to provide seamless access to the Windows file system, where Windows drives are mounted under /mnt, such as the C: drive at /mnt/c and the D: drive at /mnt/d. This integration lets you navigate and use your Windows files directly from the Linux environment within WSL.
+
+---> \\wsl$ - By this we can go to the ubuntu folder 
+
+---> sudo (The sudo command in Linux and Unix-like systems stands for "superuser do" and allows a permitted user to execute commands with elevated privileges, typically as the superuser (root). It’s used for administrative tasks such as installing software, modifying system files, or changing configurations that a regular user cannot perform. sudo enhances security by requiring the user's password for authentication instead of logging in as root, reducing the risk of system compromise. Once authenticated, permissions are cached briefly, so repeated commands don’t require re-entering the password. It’s important to use sudo cautiously, as it grants full access to the system, and permissions are managed through the /etc/sudoers file.)
