@@ -1,0 +1,20 @@
+---> Executable files (An executable file is a type of file that a computer can directly run or execute as a program. These files contain machine code or instructions that the operating system and CPU can interpret to perform specific tasks. Executable files are essential for running software applications, scripts, and utilities on a computer.)
+
+---> Script Executable File (A script executable file is a text file containing a series of commands or instructions that are interpreted and executed by a specific interpreter (like Bash, Python, or PowerShell) rather than being directly processed by the CPU. These files enable automation of tasks, often in system administration or software development, and typically have extensions that indicate the interpreter (e.g., .sh for shell scripts, .py for Python, .bat for batch files on Windows). For a script to be executable on Unix-like systems, it must have the appropriate permissions (chmod +x filename). When executed, the system invokes the specified interpreter to run the script's commands.)
+
+---> .bat VS .sh - 
+.bat files: These are batch files primarily used in Windows. They are processed by the Command Prompt (cmd.exe) in Windows. Batch files were originally used in DOS, and their syntax is specific to the Windows environment.
+
+.sh files: These are shell scripts used in Unix-like systems such as Linux and macOS. They are executed by Bash or other Unix shells (like Zsh, Ksh, etc.). The syntax of .sh files follows the conventions of the Unix shell environment.
+
+---> echo hello world > app.js (This command prints hello world in the app.js file)
+
+---> chmod +x file_name (this command is usend to change the file permission, +x means executable)
+
+---> Binary Executable Files - A binary executable file is a compiled file containing machine code instructions that a computer’s CPU can directly execute. Unlike human-readable source code, it’s in a binary format that’s optimized for performance and can be run as a program by the operating system without further compilation or interpretation. These files are platform-dependent, meaning an executable for one operating system (e.g., Windows .exe) may not work on another (e.g., macOS) without modification. Compilers create binary executables from source code, often bundling in necessary resources and metadata for efficient execution.
+
+---> If we copy and paste any executable file path in anywhere in the bash(in double quote) and in poweshell( & path...) then it will run automatically 
+
+---> sudo mv node noodles -  The command sudo mv node noodles renames or moves a file or directory named node to noodles using superuser permissions (with sudo)  
+
+---> The node command can run from anywhere in the terminal because its executable is located in a directory listed in the system’s PATH environment variable, which holds directories where the system searches for commands. When Node.js is installed, it typically places the node executable in a common PATH directory (like /usr/local/bin on Linux/macOS or C:\Program Files\nodejs\ on Windows), enabling global access to the command. If node isn’t accessible globally, you may need to manually add its directory to the PATH. This allows the system to find and execute node from any directory in the terminal.
