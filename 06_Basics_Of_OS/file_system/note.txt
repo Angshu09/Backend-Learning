@@ -1,0 +1,31 @@
+---> Symbolic Links - A symbolic link, also known as a symlink or soft link, is a type of file in a filesystem that serves as a pointer or shortcut to another file or directory. It acts like a reference to the target file or directory, allowing users and programs to access the target through the link.
+
+---> ls -l (The ls -l command in Unix-like operating systems lists the files and directories in a specified directory in long format, showing detailed information about each item. This command is often used for getting a more in-depth look at the contents of a directory, including permissions, ownership, file sizes, and modification dates.)
+- for a regular file
+d for a directory
+l for a symbolic link
+ls -l can be combined with other options to modify its output, for example:
+ls -lh: Shows file sizes in a more human-readable format (KB, MB, etc.).
+ls -la: Lists all files, including hidden files (those starting with .).
+ls -lt: Sorts by modification time, with the most recently modified files at the top.
+
+---> What is a path - In computing, a path is a string that specifies the location of a file or directory within a filesystem. Paths are used to navigate file structures and access specific files or folders. They can be either absolute or relative.
+
+---> Absolute Path:
+-An absolute path specifies the full location of a file or directory from the root of the filesystem.
+-It always starts from the root directory, which is denoted as / on Unix-like systems (such as Linux and macOS) and as a drive letter (e.g., C:\) on Windows.
+-Example (Unix-like): /home/user/documents/file.txt
+-Example (Windows): C:\Users\User\Documents\file.txt
+
+---> Relative Path:
+-A relative path specifies a file or directory location relative to the current directory (the directory you are currently in).
+-It doesn’t start from the root but instead from your current working directory, and often uses . (current directory) and .. (parent directory) symbols.
+-Example: documents/file.txt (if your current directory is /home/user)
+
+---> Directory Separator:
+Unix-like systems use / as a directory separator (e.g., /home/user/documents).
+Windows uses \ as a directory separator (e.g., C:\Users\User\Documents).
+. refers to the current directory.
+.. refers to the parent directory (one level up).
+
+---> cygpath -w (it is used to convert any Windows path to unix path and also unix path to windows path for more serach on Google)
