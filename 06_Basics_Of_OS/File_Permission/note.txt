@@ -1,0 +1,93 @@
+---> File permissions define who can read, write, or execute a file in Unix/Linux systems. They determine the actions allowed for different types of users: the owner, the group, and others.
+
+---> how we can change the permissions of any file in window - 
+Using File Explorer
+-Right-click the file or folder you want to change permissions for and select Properties.
+-Go to the Security tab, where you’ll see a list of users and groups with permissions.
+-Select a user or group and click Edit to modify permissions.
+-In the Permissions window, check or uncheck boxes for Full Control, Modify, Read & Execute, Read, and Write to change the permissions.
+-Click Apply and then OK to save changes.
+
+---> write in the file without the read permission -
+    printf "\nAngshu Das" >> abc
+ When \n appears literally in a file instead of creating a new line, it’s because Bash doesn’t interpret it by default as a newline. To fix this, use echo -e "YourName\n" >> filename, where -e enables interpretation of \n as a newline. Alternatively, use printf "YourName\n" >> filename, as printf automatically interprets escape characters. Both methods ensure \n is treated correctly as a newline, making "YourName" appear on its own line in the file.
+
+--->Read and execute permission -  The combined Read & Execute permission in Windows allows users to both view or open a file and run it as a program. This permission enables users to read the contents of files and folders, as well as execute executable files (like .exe, .bat, or .cmd), or run scripts and programs. For directories, it allows users to access and navigate through subfolders. This permission is commonly assigned to program files, enabling users to run applications without being able to modify or delete them. It provides a balance between allowing access and preventing accidental changes to files.
+
+---> The line drwxr-xr-x 2 angshu angshu 4096 Nov 12 14:21 src describes a directory (src) with read, write, and execute permissions for the owner (angshu), read and execute for the group and others, with 2 links, a size of 4096 bytes, and last modified on Nov 12 at 14:21.
+
+---> For directories, a default size is often set. Typically, this is 4096 bytes (4 KB), as directories contain metadata about the files they hold (like names and inodes). This size can vary depending on the filesystem.
+
+---> In WSL, a group is a collection of users that helps manage file permissions and access control. Linux systems (including WSL) organize file permissions into three categories: Owner (file creator), Group (associated group), and Others (anyone else). Each category can have read, write, or execute permissions. For instance, permissions like -rwxr-x--- mean the owner has full permissions, the group can read and execute, and others have no access. Groups allow administrators to assign permissions to multiple users at once, simplifying access management. You can manage groups using commands like groupadd, groupdel, and usermod, and modify file permissions for groups using chmod.
+
+---> A hard link is a direct reference to the same data on disk as another file, effectively creating two (or more) filenames that point to the same file content. Unlike a soft (symbolic) link, a hard link shares the same inode (data location identifier) as the original file, so any changes made to the file’s content via one link will be reflected across all hard links. Hard links must be on the same filesystem and can't link to directories. If the original file is deleted, the data remains accessible through its hard links until all links are removed. This makes hard links useful for conserving storage space and ensuring data consistency across multiple references.
+
+---> ln command (By default, ln creates a hard link, which points directly to the same data on disk as the original file. This means both the original file and the hard link share the same content, and changes to one are reflected in the other.)
+
+---> executable directory (An executable directory in Linux is a directory where users have execute permissions (x), allowing them to access (or enter) the directory using cd and open or list files within it if they also have read permissions. Execute permission on a directory doesn't mean it can be "run" like a program; rather, it controls whether a user can navigate into the directory and access its contents. Without execute permission, a user cannot enter or traverse the directory, even if they have read access to the files inside.)
+
+---> chmod command (The chmod command in Linux changes file or directory permissions, allowing control over who can read, write, or execute a file. Permissions can be set for the user (owner), group, and others using two modes: Symbolic Mode (e.g., chmod u+x file to add execute permission for the user) or Numeric Mode (e.g., chmod 755 file, where each digit represents permissions for user, group, and others respectively). In numeric mode, read is 4, write is 2, and execute is 1, so 755 gives full permissions to the user and read-execute to group and others. chmod is essential for managing file access and security.)
+
+****important things****
+- means file (first character must be - then it is a file)
+d means directory (at first d must be present)
+l means symbolic links 
+r means read
+w means write
+x means execute
+rwx means read write execute
+
+*****how to read the permission systems*****
+-rw-r--r-- 1 angshu angshu 0 Nov 15 03:38 hello.js
+User: angshu
+Group: angshu
+Others: anyone who is neither the user nor in the specified group
+Breakdown of Permissions (-rw-r--r--):
+
+User (Owner): rw-
+r: Read permission
+w: Write permission
+-: No execute permission
+
+Group: r--
+r: Read permission
+-: No write permission
+-: No execute permission
+
+Others: r--
+r: Read permission
+-: No write permission
+-: No execute permission
+
+---> If i want to remove or add permission specifically to user or other or group then write in this way -
+chmod u+x file_name (means we add the execute permission for user)
+chmod o-x file_name (means we remove the execute permission for others)
+
+--->
+read => r => 4
+write => w => 2
+execute => x => 1
+
+--->stat -c "%A %a %n" hello.js -  The command stat -c "%A %a %n" hello.js displays the file permissions in three parts: %A shows symbolic permissions (e.g., -rw-r--r--), %a gives numeric permissions in octal form (e.g., 644), and %n displays the file name (hello.js). For this file, -rw-r--r-- means the user has read and write permissions (6), while the group and others have read-only permissions (4). The result would look like: -rw-r--r-- 644 hello.js.
+
+---> I can also use like this - chmod 000 file_name (no permission to all), chmod 744 file_name (means user has rwx & group and other has only read permission)
+
+---> The command git diff --summary provides a concise summary of file-level changes in a Git repository, highlighting added, deleted, renamed, and moved files without displaying detailed line-by-line differences. For example, it may show newly created files, files that have been deleted, renamed, or moved, as well as any changes in file permissions. The output is compact, listing actions like "create mode," "delete mode," or "rename from/to," giving a quick overview of structural changes in the repository.
+
+*****git Permissions*****
+100644 normal file with non executable permission 
+100755 normal file with executable permission 
+120000 symbolic links 
+040000 directory 
+
+
+
+
+
+
+
+
+
+
+
+
