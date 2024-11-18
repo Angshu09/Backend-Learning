@@ -1,0 +1,23 @@
+---> which command (The which command in Linux and Unix-like operating systems is used to locate the executable file associated with a command. It searches for the command in the directories listed in the user's PATH environment variable and returns the path to the executable if found.)
+
+---> type command (The which command in Linux and Unix-like operating systems is used to locate the executable file associated with a command. It searches for the command in the directories listed in the user's PATH environment variable and returns the path to the executable if found.)
+
+Alias - Bash first checks if the command matches any defined aliases
+
+Function - Next, it checks if the command matches any defined shell function 
+
+Built-ins- Then, Bash checks if the command is a build-in shell command
+
+Hash table - Bash checks its hash table of previously looked-up executables to quickly determine the location of a command without repeatedly searching the directories listed in the $PATH, improving execution speed. 
+
+Executable files - Finally, it searches through the directories listed in the $PATH environment variable, in order, to locate the executable file corresponding to the command. If found, the shell executes it; otherwise, it returns a "command not found" error.
+
+---> winpty.exe (winpty.exe is a helper program commonly used in Windows environments to ensure proper functioning of terminal applications, especially those requiring a pseudo-terminal (PTY) interface. It plays an important role when running certain command-line tools, including Node.js, in terminals like Command Prompt or PowerShell, which don't natively support PTY functionality)
+
+---> echo $PATH | tr ":" "\n" -  (The command echo $PATH | tr ":" "\n" prints the directories in the $PATH environment variable, replacing the colons (:) that separate them with newlines for easier readability. This splits the $PATH variable into a list of directories, each displayed on its own line. It’s useful for debugging or inspecting the directories the shell searches for executables, especially when trying to identify missing or incorrect paths.)
+
+---> In the context of the Bash shell, hash tables are used to store information about previously looked-up commands and executable files to speed up the process of locating and running them. When you type a command in the terminal, Bash first checks its hash table to see if it already knows the location of that command. If a match is found, it quickly retrieves the executable from memory rather than searching through all directories listed in the $PATH. This lookup process saves time when running frequently used commands, especially when working with many files or when dealing with long $PATH values.
+
+---> The command PATH=$PATH:/c/Users/angsh/Downloads/13_how-commands-get-executed-fbd1f1bcb795809c3992122031752dda/13_how-commands-get-executed appends a specific directory (/c/Users/angsh/...) to the existing $PATH environment variable, which is a list of directories the shell searches for executables. By doing this, any executable files in that directory can be run directly from the terminal without needing to specify their full path. This is useful for adding custom directories containing scripts or programs to your command search path.
+
+---> 
