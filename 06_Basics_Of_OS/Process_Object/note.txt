@@ -1,0 +1,4 @@
+---> process.argv (In Node.js, process.argv is an array containing command-line arguments passed to the Node.js process. The first element is the path to the Node.js executable, the second is the path to the script being executed, and subsequent elements are user-provided arguments. For example, running node script.js arg1 arg2 makes process.argv contain ['/path/to/node', '/path/to/script.js', 'arg1', 'arg2']. It's commonly used to customize script behavior, and developers often skip the first two elements (process.argv.slice(2)) to access user inputs directly. For advanced parsing, libraries like yargs or commander are helpful.)
+
+
+---> 
