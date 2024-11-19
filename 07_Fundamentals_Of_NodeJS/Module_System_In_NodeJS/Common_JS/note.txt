@@ -1,0 +1,103 @@
+---> CommonJS is a module system used in JavaScript, primarily in Node.js, for defining and managing modules. It was designed to allow developers to split code into separate files or modules, making the codebase more modular, reusable, and maintainable. Before the introduction of ES6 modules (import/export), CommonJS was the standard module system for JavaScript in server-side environments like Node.js.
+
+Key Features of CommonJS:
+
+Module Definition:
+CommonJS modules are defined using module.exports or exports, which specify what functionality (variables, functions, objects, etc.) should be accessible from outside the module.
+
+Module Importing:
+Modules are imported using the require() function. This allows you to load code from other files and use the exported functions or objects.
+
+
+
+---> The require() function in Node.js is used to load modules into your application, allowing you to use built-in, external, or locally defined modules. When you call require(), Node.js first resolves the module path, then loads the module by either reading a local file or importing a built-in one. The module is executed within its own scope, and the module.exports object is returned, making the module's functionality available to the calling code. Once a module is loaded, it is cached, so subsequent calls to require() for the same module use the cached version, improving performance. This system enables modular, maintainable code in Node.js applications.
+
+
+
+---> const [sum, product] = "Angshu";
+console.log(sum, product) ---> A n 
+--->  strings can be destructured in JavaScript, but in a slightly different way than arrays or objects. Since strings are array-like objects (they are iterable and can be indexed like arrays), you can destructure a string by treating it as an array of characters.
+
+
+
+---> module.exports - 
+-module.exports is initially an empty object {}. Anything you assign to it will be exported from the module.
+-You can export a function, object, or any value, and when you require() that module, you get access to what is exported.
+-require() caches the module after it’s loaded for the first time, so it doesn't re-execute the module every time it’s required.
+-CommonJS modules (using module.exports and require()) are synchronous, meaning they block execution until the module is fully loaded and evaluated.
+
+
+
+---> In Node.js, the module.isPreloading property (introduced in v14.8.0) is a boolean that indicates whether a module is being preloaded using the --require CLI flag. When a module is preloaded (e.g., node --require my-preload.js app.js), module.isPreloading is true, allowing developers to execute specific logic during preloading. If the module is loaded in any other way, such as via require() or import, this property is false, making it useful for handling preload-specific behavior or avoiding redundant execution.
+
+
+
+---> In JavaScript, "use strict" is a directive that activates strict mode, a way to enforce a stricter set of rules for JavaScript code. It can be applied to an entire script or a specific function. Strict mode helps catch common coding errors, improves performance, and lays the groundwork for future JavaScript versions.
+
+
+
+---> module Object Properties
+
+module.exports - 
+Defines what a module exports, making it accessible to other modules when require() is used.
+-Default value: An empty object ({}), but can be reassigned to any value (e.g., function, object).
+-Example:
+module.exports = { greet: () => console.log("Hello!") };
+
+
+exports-
+A shorthand for module.exports, linked by default.
+If module.exports is reassigned, exports is no longer connected.
+-Example:
+exports.sayHi = () => console.log("Hi!");
+
+
+module.id-
+The identifier of the module, usually the module’s absolute file path.
+-Example: Outputs the full path of the current module:
+/path/to/your/module.js
+
+
+module.filename-
+The full path of the current module file.
+Example: Displays the same value as module.id in most cases:
+/path/to/your/module.js
+
+
+module.loaded-
+A boolean indicating whether the module has been fully loaded.
+Initially false, it becomes true after the module's code finishes execution.
+
+
+module.parent-
+The module that required (or imported) the current module.
+Useful for identifying the entry point of the application.
+-Example: Outputs the parent module details, such as:
+Module { id: '/path/to/parent.js', ... }
+
+
+module.children-
+An array containing modules that were required by the current module.
+-Example: Shows the list of all modules imported by the current one:
+[ Module { id: '/path/to/child1.js', ... }, ... ]
+
+
+module.paths-
+An array of directories where Node.js looks for modules during require().
+Includes the current directory’s node_modules and parent directories.
+-Example:
+[  '/path/to/project/node_modules',  '/path/node_modules',  ...]
+
+
+module.isPreloading-
+A boolean that indicates if the module is being preloaded using the --require CLI flag.
+-Example: Displays true if preloaded:
+node --require ./module.js app.js
+
+
+---> In Node.js, the module wrapper function encapsulates each module’s code in a private scope, preventing global variable pollution and enabling safe execution. Internally, Node.js wraps your code like this: (function (exports, require, module, __filename, __dirname) { /* your code */ }), injecting variables such as exports (for exporting functionality), require (to import modules), module (the current module object), __filename (the module's file path), and __dirname (the module's directory path). This ensures encapsulation, provides essential tools for modularity, and optimizes performance by isolating each module.
+
+
+
+
+---> 
