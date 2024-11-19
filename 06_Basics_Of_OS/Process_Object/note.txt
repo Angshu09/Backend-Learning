@@ -1,4 +1,49 @@
 ---> process.argv (In Node.js, process.argv is an array containing command-line arguments passed to the Node.js process. The first element is the path to the Node.js executable, the second is the path to the script being executed, and subsequent elements are user-provided arguments. For example, running node script.js arg1 arg2 makes process.argv contain ['/path/to/node', '/path/to/script.js', 'arg1', 'arg2']. It's commonly used to customize script behavior, and developers often skip the first two elements (process.argv.slice(2)) to access user inputs directly. For advanced parsing, libraries like yargs or commander are helpful.)
 
 
----> 
+Environment Variables:
+
+process.env: An object containing the user environment variables.
+
+Process IDs:
+process.pid: The ID of the current process.
+process.ppid: The ID of the parent process.
+
+System Information:
+process.platform: The operating system platform (e.g., win32, linux).
+process.arch: The processor architecture (e.g., x64, arm).
+
+Node.js Version Information:
+process.version: The version of Node.js.
+process.versions: An object with versions of Node.js and its dependencies.
+
+Process Methods
+
+Working Directory:
+process.cwd(): Returns the current working directory.
+process.chdir(path): Changes the current working directory to path.
+
+Memory and Performance:
+process.memoryUsage(): Returns an object showing the memory usage of the process.
+process.uptime(): Returns the uptime of the process in seconds.
+
+Process Control:
+process.exit(code): Exits the process with the given exit code (0 for success).
+process.kill(pid): Sends a signal to the process specified by pid.
+
+Warnings:
+process.emitWarning(message, options): Emits a custom warning with additional details like a code or description.
+Stream Interaction
+Standard Streams:
+process.stdout.write(data): Writes output to the standard output stream.
+process.stderr.write(data): Writes output to the standard error stream.
+process.stdin.on(event, callback): Listens for data on the standard input stream.
+Event Handling
+Registering Event Listeners:
+process.on('exit', callback): Listens for the process exit event, with the callback receiving the exit code.
+process.on('warning', callback): Handles warning events.
+process.stdin.on('data', callback): Handles input data from the standard input stream.
+
+Event Loop Management
+Next Tick:
+process.nextTick(callback): Queues a callback function to be executed on the next iteration of the event loop.
