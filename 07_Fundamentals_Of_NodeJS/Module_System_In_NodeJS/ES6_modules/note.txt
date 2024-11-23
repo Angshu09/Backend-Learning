@@ -1,0 +1,26 @@
+---> What are es6 modules - 
+ES6 modules, introduced in ECMAScript 2015, provide a standardized way to organize and share JavaScript code using import and export statements. Each module corresponds to a file, with code scoped to that file by default, avoiding global namespace pollution. You can export multiple items with named exports or a single default export, and import them selectively or entirely in other modules. ES6 modules are statically analyzed, enabling optimizations like tree-shaking, and automatically use strict mode for safer coding. They are natively supported by modern browsers and tools, simplifying dependency management and promoting modular, maintainable codebases.
+
+
+
+---> what is package.json-
+In Node.js, package.json is a configuration file that defines a project's metadata, dependencies, scripts, and other settings. It includes key information like the project name, version, description, main entry point, and compatible Node.js versions. Dependencies are categorized into dependencies for runtime and devDependencies for development tools. Custom scripts automate tasks like starting the server or running tests, while semantic versioning ensures compatibility. It also specifies licensing, repository details, and can prevent accidental publishing with "private": true. Overall, package.json is vital for managing, building, and maintaining Node.js projects.
+
+
+
+---> By default the strict mode is enable for all the modules of our project 
+
+
+---> module scope - In Node.js, module scope ensures that each file operates in an isolated environment, with its own private variables, functions, and classes that do not leak into the global namespace. Code in a module is encapsulated and only accessible to other files through explicit exports using module.exports or ES6 export. This isolation prevents naming collisions, improves maintainability, and promotes code reuse. Node.js achieves this by wrapping each module in a function that provides local access to variables like exports, require, module, __filename, and __dirname, keeping the module's scope separate from others.
+
+
+
+---> import.meta - In Node.js, import.meta is an object specific to ES modules that provides metadata about the current module. Its primary property, import.meta.url, gives the file path as a file: URL, serving as a replacement for CommonJS's __filename and __dirname. This is useful for resolving paths dynamically, especially when combined with utilities like fileURLToPath and dirname. Additionally, frameworks and tools can extend import.meta to include custom metadata, making it valuable for dynamic imports, configuration, and runtime decisions. It standardizes module-specific metadata across JavaScript environments
+
+
+
+---> why process.cwd() is not a good practice while we are working with es6 modules-  process.cwd() reflects the directory where the Node.js process was started, not the directory of the module itself, which can lead to inconsistent behavior in ES6 modules. Instead, ES6 modules should use import.meta.url to reliably determine the file or module's location, ensuring predictable and portable behavior across different environments.
+
+
+
+---> 
