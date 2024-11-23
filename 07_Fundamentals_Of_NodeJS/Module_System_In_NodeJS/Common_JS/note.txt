@@ -98,6 +98,12 @@ node --require ./module.js app.js
 ---> In Node.js, the module wrapper function encapsulates each module’s code in a private scope, preventing global variable pollution and enabling safe execution. Internally, Node.js wraps your code like this: (function (exports, require, module, __filename, __dirname) { /* your code */ }), injecting variables such as exports (for exporting functionality), require (to import modules), module (the current module object), __filename (the module's file path), and __dirname (the module's directory path). This ensures encapsulation, provides essential tools for modularity, and optimizes performance by isolating each module.
 
 
+---> An Immediately Invoked Function Expression (IIFE) in Node.js is a function that executes immediately after being defined, often used to create a private scope and avoid polluting the surrounding context. While Node.js modules inherently have their own scope, IIFEs are still useful for encapsulating code, managing private variables, structuring asynchronous logic, or isolating initialization routines. They are commonly used with traditional function syntax or arrow functions and can help ensure code organization and avoid hoisting or variable conflicts within a module.
+
+
+
+---> VM module- In Node.js, the vm module provides tools to execute JavaScript code in isolated, sandboxed environments, ensuring the code runs separately from the main application context. It allows developers to safely run untrusted or dynamically generated code by creating controlled execution contexts using methods like vm.createContext() and vm.runInContext(). The vm.Script class compiles reusable scripts, while functions like vm.runInNewContext() execute code in entirely new contexts with limited scope. This is useful for secure code execution, testing, or building dynamic applications. However, while it offers isolation, additional precautions may be needed to prevent sandbox escape.
+
 
 
 ---> 
