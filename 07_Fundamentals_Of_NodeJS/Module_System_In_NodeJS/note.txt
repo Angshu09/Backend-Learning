@@ -1,1 +1,10 @@
 ---> The module system is a programming design pattern used to organize and manage code by breaking it into smaller, reusable, and independent units called modules. Each module typically encapsulates functionality, logic, or data, and can interact with other modules when needed. A module system governs how these modules are defined, loaded, and used.
+
+
+---> Command line tools - A command-line tool is a text-based software program operated through a command-line interface (CLI), where users input specific commands in a terminal to perform tasks. These tools are efficient, flexible, and often scriptable, making them ideal for automating repetitive tasks, managing systems, or controlling applications. Common examples include system utilities like ls (list files), development tools like git (version control), and specialized tools like aws-cli for managing cloud services. Command-line tools are favored for their precision, speed, and resource efficiency, especially in environments where graphical user interfaces are unavailable.
+
+
+---> What is NPM - NPM (Node Package Manager) is a tool for managing JavaScript packages, commonly used with Node.js. It helps developers install, update, and manage project dependencies via a vast library of reusable code. NPM also supports custom scripts and automates tasks like testing and building projects. It's essential for modern JavaScript development, simplifying workflows and fostering code sharing.
+
+
+---> 

@@ -23,4 +23,19 @@ In Node.js, package.json is a configuration file that defines a project's metada
 
 
 
----> 
+---> CommonJS (CJS) Module System:
+Introduced Early: CommonJS was the original module system in Node.js, designed for server-side environments.
+Synchronous Loading: Modules are loaded synchronously using require(), suitable for server-side tasks.
+Mutable Exports: Exports are mutable and can be modified at runtime.
+No File Extensions Needed: CommonJS modules do not require file extensions; .js is assumed by default.
+Widely Used: The majority of Node.js packages and legacy applications use CommonJS.
+Backward Compatibility: Ensures compatibility with existing Node.js projects and npm packages.
+
+
+---> ES6 (ESM) Module System:
+Introduced Later: ES Modules were standardized in ECMAScript 2015 (ES6) and are now the official JavaScript module format.
+Asynchronous Loading: Modules are loaded asynchronously using import, making them ideal for modern web development.
+Immutable Exports: Exports are static and immutable, which helps with optimizations like tree-shaking in bundlers.
+File Extensions Required: ES Modules require explicit file extensions, like .js or .mjs, for module imports.
+Better for Modern Development: ESM is designed to work across both browsers and Node.js, offering improved interoperability and optimizations.
+Supports Modern Features: ESM supports modern JavaScript features, including dynamic import() and top-level await.
