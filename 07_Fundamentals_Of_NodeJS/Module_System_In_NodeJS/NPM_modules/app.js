@@ -3,10 +3,10 @@
 //if node cannot find a particular package in its core then it will look for an another folder which is node_modules folder
 
 
-// import {num} from "maths"
+import {num} from "maths"
 
 
-const {num} = require('maths')
+// const {num} = require('maths')
 
 
 

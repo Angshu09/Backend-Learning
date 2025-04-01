@@ -1,0 +1,12 @@
+{
+    "name": "file-copy-cli",
+    "version": "1.0.0",
+    "description": "A simple CLI tool to copy files",
+    "bin": {
+      "copy": "./copy.js"
+    },
+    "type": "module",
+    "dependencies": {},
+    "author": "Angshu"
+  }
+  

@@ -1,0 +1,6 @@
+fs.writefile() --->
+fs.writeFile is a method in Node.js used to write data to a file asynchronously. It overwrites the file if it already exists or creates a new one if it doesn't. It is part of the fs (File System) module and supports both callbacks and Promises (using fs/promises).
+
+fs.appendFile() --->
+fs.appendFile is a method in Node.js used to add (append) data to an existing file asynchronously. If the file does not exist, it creates a new one. Unlike fs.writeFile, which overwrites the file, fs.appendFile preserves existing content and adds new data at the end.
+

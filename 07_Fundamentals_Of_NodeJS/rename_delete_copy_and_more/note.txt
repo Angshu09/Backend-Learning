@@ -1,0 +1,37 @@
+rename() --> 
+The fs.rename() method in Node.js is used to rename or move files and directories asynchronously. Its syntax is fs.rename(oldPath, newPath, callback), where oldPath is the current name/location and newPath is the new name/location. If the target file exists, it will be overwritten. To use promises, fs.promises.rename(oldPath, newPath) can be used with async/await. It works for both files and directories, allowing renaming or moving between folders. Example: fs.rename("old.txt", "new.txt", (err) => { if (err) console.error(err); else console.log("Renamed!"); });. Similarly, moving a file is done using fs.rename("source/file.txt", "destination/file.txt", callback). It’s a simple and efficient way to manage files programmatically. 
+
+
+copyFile() --> 
+The fs.copyFile() method in Node.js is used to copy a single file from one location to another. It does not support copying directories and will overwrite the destination file by default unless a flag like COPYFILE_EXCL is used to prevent overwriting. It can be used with a callback (fs.copyFile("source.txt", "destination.txt", callback)) or with promises (await copyFile("source.txt", "destination.txt")). Additionally, it supports flags such as COPYFILE_FICLONE for copy-on-write cloning if supported by the system.
+
+
+cp() --> 
+The fs.cp() method, introduced in Node.js 16, allows copying both files and directories. Unlike fs.copyFile(), it supports { recursive: true } to enable directory copying (await cp("source-folder", "destination-folder", { recursive: true })). It does not support flags like COPYFILE_EXCL but provides options such as { force: false } to prevent overwriting and { preserveTimestamps: true } to retain the original timestamps. It is the preferred method when working with both files and directories in modern Node.js applications.
+
+
+unlink() --> 
+The fs.unlink() method in Node.js is used to delete a file asynchronously. It takes two arguments: the file path and a callback function to handle errors. The syntax is fs.unlink("file.txt", (err) => { if (err) console.error("Error:", err); else console.log("File deleted!"); });. If the file does not exist, it throws an error. For a Promise-based approach, use fs.promises.unlink(), allowing await unlink("file.txt") inside an async function. Additionally, fs.unlinkSync("file.txt") provides a synchronous blocking version. If you need to delete both files and directories, fs.rm() (introduced in Node.js 14) is an alternative, supporting { recursive: true }. 
+
+
+rmdir() --> 
+The fs.rmdir() method in Node.js is used to delete an empty directory asynchronously. Its syntax is fs.rmdir("folder", (err) => { if (err) console.error("Error:", err); else console.log("Folder deleted!"); });. However, it only works if the directory is empty; otherwise, it throws an error. For a Promise-based approach, use fs.promises.rmdir(), allowing await rmdir("folder") inside an async function. Since Node.js 14, fs.rmdir() is deprecated in favor of fs.rm("folder", { recursive: true }), which can delete non-empty directories. For synchronous deletion, fs.rmdirSync("folder") is available but also deprecated. 
+
+
+rm() -->
+The fs.rm() method in Node.js, introduced in Node.js 14, is used to delete both files and directories. Its syntax is fs.rm("path", { recursive: true }, (err) => { if (err) console.error("Error:", err); else console.log("Deleted successfully!"); });. By default, it removes files, but adding { recursive: true } allows deletion of non-empty directories as well. The Promise-based version, await fs.promises.rm("path", { recursive: true }), is preferred for modern async/await usage. It effectively replaces the deprecated fs.rmdir() for directory removal and provides a more flexible and powerful way to manage file system deletions.
+
+
+
+appendFile() -->
+The fs.appendFile() method in Node.js is used to append data to an existing file, or create a new file if it doesn't exist. Its syntax is fs.appendFile("file.txt", "data to append", (err) => { if (err) console.error("Error:", err); else console.log("Data appended!"); });. This method adds the provided content to the end of the file without overwriting the existing data. It can be used with strings or buffers and is available in both callback (fs.appendFile()) and Promise-based (fs.promises.appendFile()) versions, making it suitable for modern async/await workflows. The synchronous version is also available as fs.appendFileSync() if blocking behavior is required.
+
+
+
+stat() -->
+The fs.stat() method in Node.js is used to retrieve information about a file or directory, such as its size, permissions, and modification time. The syntax is fs.stat("path", (err, stats) => { if (err) console.error("Error:", err); else console.log(stats); });, where stats is an object containing various properties like stats.size (file size), stats.isDirectory() (checks if it's a directory), and stats.mtime (modification time). It can be used in both callback (fs.stat()) and Promise-based (fs.promises.stat()) forms, with the latter being suitable for async/await usage. fs.statSync() provides a synchronous version of the method for blocking operations. This method is often used for gathering metadata about files and directories before performing actions on them. 
+
+
+
+watch() -->
+The fs.watch() method in Node.js is used to monitor changes in a file or directory and receive notifications when files or directories are modified, added, or deleted. Its syntax is fs.watch("path", (eventType, filename) => { if (filename) console.log(${filename} changed: ${eventType}); });, where eventType can be "rename" (for file/directory creation or deletion) or "change" (for content modification). This method is asynchronous and can be used with both callback (fs.watch()) and Promise-based (fs.promises.watch()) APIs, though fs.watch() is less reliable on certain systems, and fs.watchFile() can be used for periodic polling instead. It’s especially useful for building tools like file watchers or live reloaders in development environments. Note that it doesn’t handle deeply nested directory changes well, and you might need external libraries for more robust watching. 

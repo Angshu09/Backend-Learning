@@ -1,0 +1,28 @@
+---> What NPX dose?
+= It searches for a file and executes it
+
+*****Steps of how searching works on NPX-
+
+Search-step-1
+    Searches for package.json in current working directory
+    Searches for name key in the json
+    Searches for bin key in the json 
+
+Search-step-2 (If package.json is not present in current directory)
+    Searches for node_modules folder in the current working directory
+    Searches for .bin folder 
+    then it finally looking for hello named folder in the .bin folder (if we run npx hello in terminal)
+    and finally executes it
+
+Search-step-3 (If json and node_modules both are not present in the current working directory)
+    Searches for hello in global npm folder
+    If find then executes it
+
+Search-step-4 (if it is not found in global npm folder)
+    it will go to npx cache to find hello package
+    if found then executes it
+
+Search-step-5 (if it is not found in global npm folder and npx cache)
+    it will go to npmjs.com to find hello package
+    Prompts to install the package if found
+    Downloads and install

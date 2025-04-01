@@ -1,0 +1,27 @@
+---> What is path and what is package 
+A path in computing refers to the location of a file or directory in a filesystem. It can be absolute (starting from the root, e.g., /home/user/file.txt in Linux or C:\Users\User\file.txt in Windows) or relative (based on the current directory, e.g., ./file.txt). In Node.js, the path module is used to work with file and directory paths.
+
+A package in Node.js is a collection of JavaScript files, modules, or libraries that help developers add functionality to their projects. Packages are usually managed using npm (Node Package Manager) and come with a package.json file that defines dependencies, scripts, and metadata.
+
+
+---> What are dependencies
+Dependencies are external packages or modules that a Node.js project requires to function properly. These are managed using npm (Node Package Manager) and are listed in the package.json file.
+
+
+---> What is package.json file 
+package.json is the configuration file for a Node.js project. It contains metadata about the project, including:
+Project name, version, and description
+Dependencies (packages required for the project)
+Scripts (commands to run the project)
+Author and license information
+This file helps npm manage the project efficiently.
+
+---> Why package.json is important 
+Manages Dependencies – Lists required packages, ensuring consistency in installation and version control.
+Defines Project Metadata – Stores project name, version, description, author, and license.
+Enables Custom Scripts – Allows automation of tasks like starting the server, testing, and building.
+Ensures Project Consistency – Helps maintain the correct versions of dependencies for all users.
+Supports Version Control & Collaboration – Makes it easy to share and set up the project without including node_modules/.
+
+
+---> 

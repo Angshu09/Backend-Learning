@@ -3,5 +3,5 @@ var a = "hello"
 console.log(sum(5, 5))
 
 
-import num from "./math.js"
-console.log(num)
+import n from "./math.js" //in default export we can use any name as we like 
+console.log(n)

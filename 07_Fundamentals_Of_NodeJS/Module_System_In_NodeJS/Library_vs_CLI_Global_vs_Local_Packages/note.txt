@@ -1,0 +1,14 @@
+---> Library Package - In Node.js, a library package is a reusable module containing prewritten JavaScript code to simplify and accelerate development. These packages are distributed via the npm (Node Package Manager) ecosystem, allowing developers to easily install, update, and manage dependencies. Common examples include express for web server creation, mongoose for MongoDB interactions, and lodash for utility functions. Node.js library packages often focus on modularity and can handle tasks such as file system access, HTTP requests, or real-time communication. These packages are installed with the npm install command and integrated into projects to streamline coding while promoting best practices.
+
+
+
+---> A CLI (Command Line Interface) package is a type of library or tool designed to be used directly from the command line to perform specific tasks or automate workflows. In the Node.js ecosystem, CLI packages are often built using libraries like commander or yargs to parse arguments and options. They can be published via npm and installed globally (npm install -g) for system-wide access or locally within a project. CLI packages, such as npm, webpack, or create-react-app, enable developers to run commands for building, testing, scaffolding projects, or managing dependencies, providing a user-friendly interface for complex scripts.
+
+
+
+---> Vite is a modern build tool and development server designed for fast and efficient front-end development. Created by the Vue.js team, Vite offers instant server start-up and lightning-fast hot module replacement (HMR) by leveraging ES modules (ESM) and native browser capabilities. Unlike traditional bundlers, it uses Rollup for production builds and a lean, unbundled development approach, significantly reducing start-up times. Vite supports frameworks like Vue, React, and Svelte and is highly configurable with plugins. Its primary goal is to enhance the developer experience by optimizing both the development and build process with minimal configuration.
+
+
+
+---> Using npx for CLI packages allows you to run Node.js tools without installing them globally, making it ideal for one-time or infrequent use. It fetches and executes the package directly, ensuring you always use the latest version unless specified otherwise. This avoids cluttering your system, reduces version conflicts, and streamlines workflows by combining installation and execution into a single step. For example, commands like npx create-react-app my-app or npx vite let you quickly set up or use tools without affecting your global environment.
+

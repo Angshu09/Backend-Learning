@@ -1,0 +1,5 @@
+
+
+9:53:18 PM
+ENOENT: no such file or directory, open 'C:\Users\angsh\OneDrive\Desktop\Backend-Learning\07_Fundamentals_Of_NodeJS\writing_to_a_file_using_nodeJS\nodejs.js'
+Error: ENOENT: no such file or directory, open 'C:\Users\angsh\OneDrive\Desktop\Backend-Learning\07_Fundamentals_Of_NodeJS\writing_to_a_file_using_nodeJS\nodejs.js'

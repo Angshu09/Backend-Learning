@@ -1,0 +1,24 @@
+---> What are node modules - 
+Node modules are reusable JavaScript libraries or packages in Node.js that help developers avoid writing repetitive code. They can be built-in (like fs, http, path), third-party (installed via npm, such as express or lodash), or user-defined. These modules are stored in the node_modules folder within a project. They follow the CommonJS module system, where require() is used to import modules and module.exports is used to export functionality. Using modules improves code organization, reusability, and maintainability in Node.js applications.
+
+
+
+---> what are core node modules - 
+Core Node modules are built-in modules that come pre-installed with Node.js, providing essential functionalities without needing external dependencies. These modules help developers perform various tasks like handling files, creating servers, managing streams, and more. Some commonly used core modules include:
+
+fs (File System) – Handles file operations like reading and writing files.
+
+http – Enables building web servers and handling HTTP requests.
+
+path – Works with file and directory paths.
+
+os – Provides information about the operating system.
+
+events – Implements the event-driven architecture in Node.js.
+
+util – Contains utility functions for debugging and formatting.
+
+crypto – Supports cryptographic operations like hashing and encryption.
+
+Since these modules are part of Node.js, they can be used without installation by requiring them with require('module_name').
+

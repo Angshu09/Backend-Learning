@@ -8,7 +8,7 @@ console.log(text.toString())
 
 
 console.log(global) // this is global object of nodeJS
-//if we log window here then it will produce error and if we log global in browser then brwser console will produce an error
+//if we log window here then it will produce error and if we log global in browser then browser console will produce an error
 
 
 console.log(globalThis) // globalThis presents in both nodeJS and browser. Here it represents global object and in browser it represents window object 

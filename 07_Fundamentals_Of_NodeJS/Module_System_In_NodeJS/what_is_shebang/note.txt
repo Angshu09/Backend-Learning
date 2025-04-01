@@ -1,0 +1,4 @@
+---> A shebang (#!) is used at the beginning of a script file to specify the interpreter (e.g., #!/usr/bin/env node for Node.js) that should execute the script, allowing it to run directly from the command line without needing to specify the interpreter explicitly. It enhances portability by using #!/usr/bin/env to find the correct interpreter based on the system’s PATH. Shebangs are common in Unix-like systems and require the script to be executable (e.g., chmod +x script.js) but are not typically used on Windows.
+
+
+---> In windows this will work #!node
