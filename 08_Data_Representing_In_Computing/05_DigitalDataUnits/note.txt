@@ -1,0 +1,21 @@
+The difference between SI and IEC units mostly comes down to how they define units of data size, like kilobyte (KB), megabyte (MB), etc. Here’s a simple breakdown:
+
+📏 SI (International System of Units)
+Based on powers of 10
+Common in general computing, storage devices (like hard drives), and networking
+Unit	Prefix	Value in bytes
+KB	    kilo	1,000 bytes
+MB	    mega	1,000,000 bytes
+GB	    giga	1,000,000,000 bytes
+TB	    tera	1,000,000,000,000 bytes
+
+
+🧮 IEC (International Electrotechnical Commission)
+Based on powers of 2
+Common in programming, operating systems, and memory (like RAM)
+Unit	Prefix	Value in bytes
+KiB	    kibi	1,024 bytes
+MiB	    mebi	1,048,576 bytes (1024²)
+GiB	    gibi	1,073,741,824 bytes (1024³)
+TiB	    tebi	1,099,511,627,776 bytes (1024⁴)
+
