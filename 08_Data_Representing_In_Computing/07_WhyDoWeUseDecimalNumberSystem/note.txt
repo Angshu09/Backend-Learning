@@ -1,0 +1,13 @@
+🧠 Why Humans Use Decimal (Base-10)
+1. We Have 10 Fingers 🤚🤚
+The most widely accepted reason is that humans naturally started counting on their fingers.
+We have 10 fingers, so early humans grouped numbers in tens—making base-10 feel intuitive and natural.
+
+2. Historical Momentum 📜
+Ancient civilizations like the Egyptians, Greeks, and Romans used base-10 systems.
+Once writing, trade, and math developed around base-10, it stuck around.
+It became the standard in education, science, and commerce, reinforcing its use over generations.
+
+3. Simplicity in Arithmetic ➕➖
+Decimal math is relatively simple for humans to learn and perform mentally or on paper.
+It balances large-enough groupings (10) with manageable single-digit symbols (0–9).
