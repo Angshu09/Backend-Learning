@@ -1,0 +1,16 @@
+---> What is a character set - 
+A character set is a collection of characters that a computer can recognize and use. It defines how characters (letters, numbers, symbols) are stored, represented, and interpreted in digital systems.
+
+---> Why Are Character Sets Important?
+-Computers store text as binary numbers (0s and 1s).
+-A character set maps these binary values to specific characters (e.g., "A" = 65 in ASCII).
+-Without a character set, computers wouldn’t know how to display text correctly.
+
+---> ASCII
+ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns numeric values to letters, numbers, and symbols for digital communication. It uses 7-bit encoding to represent 128 characters, including uppercase and lowercase English letters (A-Z, a-z), digits (0-9), punctuation marks, and control characters (like newline). An extended 8-bit ASCII version (256 characters) adds support for additional symbols and accented letters. ASCII is the foundation of many modern encoding systems, including Unicode (UTF-8), which expands character support for global languages and symbols.
+
+---> Unicode
+Unicode is a universal character encoding standard that assigns a unique code to every character, symbol, and emoji across all languages, ensuring consistent text representation worldwide. It supports over 143,000 characters from multiple writing systems, including Latin, Arabic, Chinese, and special symbols. Unicode uses different encoding formats like UTF-8, UTF-16, and UTF-32, with UTF-8 being the most widely used due to its efficiency and backward compatibility with ASCII. This standard enables seamless text exchange across different platforms, devices, and applications.
+
+---> Character encoding
+Character encoding is the process of converting characters (letters, numbers, symbols) into a format that computers can store and understand using binary values (0s and 1s). It maps each character to a unique numeric code, allowing text to be represented and transmitted digitally. Common encoding standards include ASCII (7-bit, for basic English characters), Extended ASCII (8-bit, for additional symbols), and Unicode (UTF-8, UTF-16, UTF-32), which supports characters from all languages and emojis. Character encoding ensures accurate text display and data exchange across different systems and applications.
