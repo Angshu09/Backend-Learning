@@ -1,0 +1,17 @@
+---> xxd 
+xxd is a command-line utility commonly used on Unix-like systems (like Linux and macOS) to create a hex dump of a file or standard input. It can also reverse a hex dump back into the original binary form.
+
+---> xxd -b file_name
+The xxd -b command shows the binary representation of each byte in the file instead of the default hexadecimal format.
+
+---> UTF-8
+UTF-8 (Unicode Transformation Format - 8-bit) is a character encoding standard used to represent Unicode text in computers and on the internet. It’s the most widely used encoding today because it's efficient, compatible with ASCII, and supports every character in the Unicode standard — which includes symbols, letters, and emojis from almost every language in the world.
+
+Key Points:
+-Variable length: Each character takes 1 to 4 bytes.
+-ASCII characters (like a, 1, !) are just 1 byte.
+-More complex characters (like €, 漢, 😊) take 2–4 bytes.
+-Backwards-compatible with ASCII: Any valid ASCII file is also valid UTF-8.
+-Efficient for English: Since ASCII characters are 1 byte, UTF-8 is space-efficient for English and similar languages.
+-Widely supported: Used in web pages, programming languages, and databases.
+-In short, UTF-8 is a smart, flexible way to encode all the world's text in a format that computers can understand and share.
